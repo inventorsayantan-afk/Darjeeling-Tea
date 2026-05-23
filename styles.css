@@ -45,20 +45,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    max-width: 100vw;
-    overflow-x: hidden;
-}
 
 html {
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
-    }
 }
 
 body {
@@ -70,10 +61,6 @@ body {
 }
 
 body.loading {
-    overflow: hidden;
-}
-
-body.menu-open {
     overflow: hidden;
 }
 
@@ -292,23 +279,6 @@ section {
     background: var(--gold-light);
     box-shadow: 0 4px 24px rgba(200, 148, 74, 0.3);
     transform: translateY(-1px);
-}
-
-/* Mobile-only Shop Now link - hidden on desktop */
-.mobile-shop-link {
-    display: none;
-}
-
-.nav-cta-mobile {
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--bg-primary) !important;
-    background: var(--gold-primary);
-    padding: 0.7rem 2rem;
-    border-radius: 100px;
-    transition: all 0.35s var(--ease-in-out);
 }
 
 /* Hamburger */
@@ -866,9 +836,7 @@ section {
     width: 100vw;
     max-width: 100vw;
     position: relative;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    left: 0;
+    left: calc(-50vw + 50%);
 }
 
 .marquee-track {
@@ -1050,7 +1018,7 @@ section {
     border-radius: 100px 0 0 100px;
     padding: 0.7rem 1.2rem;
     font-family: var(--font-body);
-    font-size: 16px !important;
+    font-size: 0.82rem;
     color: var(--cream);
     outline: none;
     transition: border-color 0.3s ease;
@@ -1084,6 +1052,9 @@ section {
 .footer-bottom {
     padding-top: 2rem;
     border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.75rem;
     color: var(--text-muted);
 }
@@ -1115,33 +1086,6 @@ section {
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
-/* ---------- Reduced Motion ---------- */
-@media (prefers-reduced-motion: reduce) {
-    .reveal {
-        transition: none;
-        opacity: 1;
-        transform: none;
-    }
-
-    .marquee-track {
-        animation: none !important;
-    }
-
-    .scroll-arrow {
-        animation: none;
-    }
-
-    .product-card:hover,
-    .ingredient-card:hover,
-    .social-icon:hover {
-        transform: none;
-    }
-
-    .product-card:hover .product-image img {
-        transform: none;
-    }
-}
-
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
     :root {
@@ -1156,18 +1100,6 @@ section {
 
     .story-visual {
         height: 380px;
-    }
-
-    /* Increase footer social touch targets for tablet/mobile */
-    .footer-social a {
-        width: 44px;
-        height: 44px;
-    }
-
-    /* Footer link touch targets */
-    .footer-col a {
-        display: block;
-        padding: 0.4rem 0;
     }
 
     .ingredients-grid {
@@ -1199,12 +1131,6 @@ section {
         --nav-height: 60px;
     }
 
-    /* Shrink nav logo to fit 60px nav height */
-    .nav-logo img {
-        height: 48px;
-        width: 48px;
-    }
-
     .nav-links {
         position: fixed;
         top: 0;
@@ -1221,7 +1147,7 @@ section {
         align-items: center;
         gap: 2rem;
         transition: right 0.45s var(--ease-out-expo);
-        z-index: 1001;
+        z-index: 999;
         border-left: 1px solid var(--border-subtle);
     }
 
@@ -1231,46 +1157,22 @@ section {
 
     .nav-links a {
         font-size: 1rem;
-        /* Ensure minimum touch target size */
-        padding: 0.5rem 1rem;
     }
 
     .nav-cta {
         display: none;
     }
 
-    /* Show mobile Shop Now CTA inside drawer */
-    .mobile-shop-link {
-        display: block;
-        margin-top: 0.5rem;
-    }
-
     .hamburger {
         display: flex;
-        /* Ensure minimum touch target */
-        min-width: 44px;
-        min-height: 44px;
-        align-items: center;
-        justify-content: center;
     }
 
     .mobile-overlay {
         display: block;
-        z-index: 1000;
-    }
-
-    /* Reduce hero height on mobile for better scroll experience */
-    #hero {
-        height: 350vh;
     }
 
     .hero-title {
         font-size: clamp(2rem, 8vw, 3rem);
-    }
-
-    .hero-logo {
-        width: clamp(150px, 40vw, 250px);
-        height: clamp(150px, 40vw, 250px);
     }
 
     .ingredients-grid {
@@ -1290,10 +1192,9 @@ section {
         height: 260px;
     }
 
-    /* Keep stats in a row on mobile — the content is compact enough */
     .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .testimonial-card {
@@ -1309,7 +1210,6 @@ section {
         flex-direction: column;
         gap: 2rem;
         text-align: center;
-        padding-right: 45px; /* Keeps footer text away from the socials */
     }
 
     .footer-designer, .footer-copyright {
@@ -1321,13 +1221,9 @@ section {
         text-align: center;
     }
 
-    /* Lower z-index to not conflict with mobile nav menu */
     .floating-socials {
         right: 1rem;
         gap: 0.8rem;
-        z-index: 997;
-        transform: translateY(-50%) scale(0.85); /* Scales them down slightly */
-        transform-origin: right center;
     }
 
     .social-icon {
@@ -1342,59 +1238,16 @@ section {
 }
 
 @media (max-width: 480px) {
-    :root {
-        --container-padding: 1rem;
-    }
-
     h2 {
         font-size: 1.8rem;
     }
 
-    /* Further shrink nav logo on small phones */
-    .nav-logo img {
-        height: 40px;
-        width: 40px;
-    }
-
-    /* Further reduce hero on very small screens */
-    #hero {
-        height: 300vh;
-    }
-
     .hero-overlay {
-        /* Pushes the text up slightly and respects the phone's hardware "safe area" */
-        bottom: calc(8% + env(safe-area-inset-bottom, 20px));
-    }
-
-    .hero-overline {
-        font-size: 0.6rem;
-        letter-spacing: 0.25em;
-    }
-
-    .hero-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .hero-logo {
-        width: clamp(120px, 45vw, 200px);
-        height: clamp(120px, 45vw, 200px);
+        bottom: 4%;
     }
 
     .ingredient-card {
         padding: 2rem 1.5rem;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-    }
-
-    .stat-number {
-        font-size: 1.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.65rem;
     }
 
     .testimonial-card {
@@ -1423,102 +1276,6 @@ section {
         max-height: 90svh;
         overflow-y: auto;
     }
-
-    /* Newsletter form stacking on very small screens */
-    .newsletter-form {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .newsletter-input {
-        border-right: 1px solid var(--border-subtle);
-        border-radius: 100px;
-    }
-
-    .newsletter-btn {
-        border-radius: 100px;
-    }
-
-    /* Footer logo smaller */
-    .footer-logo-img {
-        height: 100px;
-        width: 100px;
-    }
-
-    /* Product info padding */
-    .product-info {
-        padding: 1.5rem 1.5rem 1.8rem;
-    }
-
-    /* Product CTA touch target */
-    .product-cta {
-        padding: 0.7rem 1.4rem;
-        font-size: 0.78rem;
-    }
-
-    /* Loader logo smaller on tiny screens */
-    .loader-logo {
-        width: 100px;
-        height: 100px;
-    }
-
-    /* Story visual height for small screens */
-    .story-visual {
-        height: 250px;
-    }
-
-    /* Use aspect ratio for product images instead of fixed height */
-    .product-image {
-        height: auto;
-        aspect-ratio: 16 / 10;
-    }
-
-    /* Prevent iOS Safari auto-zoom on input focus (requires >= 16px) */
-    .newsletter-input,
-    .checkout-input {
-        font-size: 16px;
-    }
-
-    /* Reposition floating socials to bottom-right on very small screens */
-    .floating-socials {
-        top: auto;
-        bottom: 1rem;
-        transform: none;
-    }
-}
-
-/* Landscape mobile — very short viewport */
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero-overlay {
-        bottom: 2%;
-    }
-
-    .hero-logo {
-        width: 100px;
-        height: 100px;
-    }
-
-    .hero-overline {
-        display: none;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    .floating-socials {
-        top: auto;
-        bottom: 1rem;
-        transform: none;
-        flex-direction: row;
-        right: 50%;
-        transform: translateX(50%);
-    }
-
-    .social-icon {
-        width: 32px;
-        height: 32px;
-    }
 }
 
 /* ---------- Floating Socials ---------- */
@@ -1530,7 +1287,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    z-index: 997;
+    z-index: 999;
 }
 
 .social-icon {
@@ -1684,7 +1441,7 @@ section {
     padding: 1rem 1.2rem;
     color: var(--cream);
     font-family: var(--font-body);
-    font-size: 16px !important;
+    font-size: 0.95rem;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
 }

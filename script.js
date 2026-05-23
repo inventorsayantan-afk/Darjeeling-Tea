@@ -6,9 +6,8 @@
     'use strict';
 
     /* ---------- Configuration ---------- */
-    const IS_MOBILE = window.innerWidth <= 768;
-    const FRAME_COUNT = IS_MOBILE ? 60 : 126;   // fewer frames on mobile for performance
-    const FRAME_STEP = IS_MOBILE ? 8 : 4;        // skip more frames on mobile
+    const FRAME_COUNT = 126;       // total frames to load
+    const FRAME_STEP = 4;          // use every 4th source frame
     const TOTAL_SOURCE_FRAMES = 500;
 
     /* ---------- DOM Refs ---------- */
@@ -201,18 +200,14 @@
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
             if (overlay) overlay.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-            // Update aria-expanded for accessibility
-            const isOpen = hamburger.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', String(isOpen));
+            document.body.classList.toggle('loading'); // reuse overflow:hidden
         }
 
         function closeMenu() {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
             if (overlay) overlay.classList.remove('active');
-            document.body.classList.remove('menu-open');
-            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('loading');
         }
 
         hamburger.addEventListener('click', toggleMenu);
@@ -221,20 +216,6 @@
         // Close on nav link click
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', closeMenu);
-        });
-
-        // Close on Escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                closeMenu();
-            }
-        });
-
-        // Close menu if window resizes above mobile breakpoint
-        window.addEventListener('resize', function () {
-            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
-                closeMenu();
-            }
         });
     }
 
@@ -368,13 +349,6 @@
             if (e.target === overlay) closeModal();
         });
         doneBtn.addEventListener('click', closeModal);
-
-        // Escape key closes modal
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && overlay.classList.contains('active')) {
-                closeModal();
-            }
-        });
 
         next1.addEventListener('click', () => {
             if (validateEmail(emailInput.value.trim())) {

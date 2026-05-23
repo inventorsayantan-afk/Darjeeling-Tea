@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Bengal Teas | Darjeeling Tea Specialists</title>
+    <meta name="description" content="Handpicked from misty Himalayan gardens at 6,000 feet. Royal Bengal Teas — where centuries of tradition meet modern artistry. Discover our curated blends of first flush Darjeeling, rose petals, and exotic spices.">
+    <meta name="keywords" content="Darjeeling tea, premium tea, artisan tea, Himalayan tea, first flush, rose petal tea, organic tea">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="loading">
+
+    <!-- ======================== LOADER ======================== -->
+    <div id="loader" role="status" aria-label="Loading">
+        <img src="images/logo.jpeg" alt="Royal Bengal Teas Logo" class="loader-logo">
+        <div class="loader-bar-track">
+            <div class="loader-bar"></div>
+        </div>
+        <span class="loader-percent">0%</span>
+    </div>
+
+    <!-- ======================== MOBILE OVERLAY ======================== -->
+    <div class="mobile-overlay" aria-hidden="true"></div>
+
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <img src="images/logo.jpeg" alt="Royal Bengal Teas Logo">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#ingredients">Ingredients</a></li>
+                <li><a href="#ritual">The Ritual</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+            <button class="nav-cta" id="nav-cta">Shop Now</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO — SCROLL ANIMATION ======================== -->
+    <section id="hero" aria-label="Product showcase scroll animation">
+        <div class="hero-canvas-container">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-overlay">
+                <p class="hero-overline">SINCE 1856 &middot; HIMALAYAN FOOTHILLS</p>
+                <h1 class="hero-title"><img src="images/logo.jpeg" alt="Royal Bengal Teas" class="hero-logo"></h1>
+                <p class="hero-subtitle">Where Tradition Meets Artistry</p>
+                <div class="scroll-indicator">
+                    <span>Scroll to Experience</span>
+                    <div class="scroll-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== STORY SECTION ======================== -->
+    <section id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-text">
+                    <span class="section-label reveal">Our Heritage</span>
+                    <h2 class="reveal reveal-delay-1">From the Misty Hills<br>of Darjeeling</h2>
+                    <p class="reveal reveal-delay-2">Nestled at 6,000 feet in the Himalayan foothills, our tea gardens have been crafting the world's finest teas for generations. Each leaf carries the whisper of mountain mist, the warmth of morning sun, and an artisanal expertise passed down through the ages.</p>
+                    <p class="reveal reveal-delay-3">We work directly with small-estate growers who share our commitment to organic practices and sustainable harvesting. Every blend is a love letter to the land that nurtures it.</p>
+                    <div class="story-highlight reveal reveal-delay-3">
+                        "The champagne of teas — a sip of Darjeeling is a sip of the Himalayas."
+                    </div>
+                    <div class="stats-grid reveal reveal-delay-4">
+                        <div class="stat">
+                            <span class="stat-number" data-count="1856">0</span>
+                            <span class="stat-label">Established</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="6000" data-suffix="ft">0</span>
+                            <span class="stat-label">Elevation</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="100" data-suffix="%">0</span>
+                            <span class="stat-label">Organic</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-visual reveal reveal-delay-2">
+                    <img src="images/story-darjeeling.png"
+                         alt="Lush green Darjeeling tea gardens nestled in the misty Himalayan foothills at sunrise"
+                         loading="lazy"
+                         width="600" height="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== INGREDIENTS SECTION ======================== -->
+    <section id="ingredients">
+        <div class="container">
+            <div class="section-divider reveal"></div>
+            <span class="section-label reveal">What's Inside</span>
+            <h2 class="reveal reveal-delay-1">Nature's Finest, Curated</h2>
+            <p class="ingredients-subtitle reveal reveal-delay-2">Each ingredient is hand-selected for its purity, potency, and harmony within the blend — creating an experience that transcends the ordinary.</p>
+            <div class="ingredients-grid">
+                <div class="ingredient-card reveal reveal-delay-1">
+                    <span class="ingredient-icon">🍂</span>
+                    <h3 class="ingredient-name">Darjeeling First Flush</h3>
+                    <p class="ingredient-desc">The champagne of teas. Hand-plucked during the first spring harvest, these delicate leaves produce a light, floral infusion with prized muscatel notes.</p>
+                </div>
+                <div class="ingredient-card reveal reveal-delay-2">
+                    <span class="ingredient-icon">🌹</span>
+                    <h3 class="ingredient-name">Himalayan Rose Petals</h3>
+                    <p class="ingredient-desc">Sun-dried at altitude, these crimson petals add a subtle floral sweetness and a beautiful blush to every cup. Rich in natural antioxidants.</p>
+                </div>
+                <div class="ingredient-card reveal reveal-delay-3">
+                    <span class="ingredient-icon">🫚</span>
+                    <h3 class="ingredient-name">Fresh Ginger Root</h3>
+                    <p class="ingredient-desc">Hand-selected ginger from the eastern hills adds a gentle warmth and aids digestion, creating a perfectly balanced foundation.</p>
+                </div>
+                <div class="ingredient-card reveal reveal-delay-1">
+                    <span class="ingredient-icon">🌿</span>
+                    <h3 class="ingredient-name">Green Cardamom</h3>
+                    <p class="ingredient-desc">Whole green cardamom pods sourced from Kerala's spice gardens bring warmth, aromatic complexity, and a whisper of sweetness.</p>
+                </div>
+                <div class="ingredient-card reveal reveal-delay-2">
+                    <span class="ingredient-icon">🍃</span>
+                    <h3 class="ingredient-name">Mountain Herbs</h3>
+                    <p class="ingredient-desc">Wild herbs foraged from the Darjeeling highlands contribute subtle earthy undertones and natural wellness benefits unique to the region.</p>
+                </div>
+                <div class="ingredient-card reveal reveal-delay-3">
+                    <span class="ingredient-icon">✨</span>
+                    <h3 class="ingredient-name">Artisan Craft</h3>
+                    <p class="ingredient-desc">Every blend is hand-mixed in small batches by our master blenders, ensuring consistency, quality, and a depth of flavour that machines cannot replicate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== RITUAL SECTION ======================== -->
+    <section id="ritual">
+        <div class="container">
+            <div class="section-divider reveal"></div>
+            <span class="section-label reveal">The Experience</span>
+            <h2 class="reveal reveal-delay-1">The Art of Brewing</h2>
+            <p class="ritual-subtitle reveal reveal-delay-2">Great tea is a ritual, not a routine. Follow these steps to unlock the full depth of flavour in every cup.</p>
+            <div class="ritual-steps">
+                <div class="ritual-step reveal reveal-delay-1">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Heat</h3>
+                    <p class="step-desc">Bring fresh spring water to 195°F (90°C). Never use boiling water — it bruises the delicate first flush leaves.</p>
+                </div>
+                <div class="ritual-step reveal reveal-delay-2">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Measure</h3>
+                    <p class="step-desc">Use 2.5 grams of tea per 200ml of water. The perfect ratio for extracting optimal flavour without bitterness.</p>
+                </div>
+                <div class="ritual-step reveal reveal-delay-3">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Steep</h3>
+                    <p class="step-desc">Let the tea steep for 3–4 minutes. Watch as the leaves unfurl and release their golden amber essence.</p>
+                </div>
+                <div class="ritual-step reveal reveal-delay-4">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Savour</h3>
+                    <p class="step-desc">Pour into a pre-warmed cup. Take a moment. Inhale the aroma before your first sip. Let the Himalayas come to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== COLLECTION SECTION ======================== -->
+    <section id="collection">
+        <div class="container">
+            <div class="section-divider reveal"></div>
+            <span class="section-label reveal">Our Collection</span>
+            <h2 class="reveal reveal-delay-1">Choose Your Journey</h2>
+            <p class="collection-subtitle reveal reveal-delay-2">Three distinct expressions of Darjeeling, each crafted for a different moment and mood.</p>
+            <div class="collection-grid">
+                <div class="product-card reveal reveal-delay-1">
+                    <div class="product-image">
+                        <span class="product-tag">Bestseller</span>
+                        <img src="images/classic-darjeeling.png"
+                             alt="Classic Darjeeling first flush tea bag in artisan burlap packaging"
+                             loading="lazy" width="400" height="320">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">First Flush Classic</h3>
+                        <p class="product-desc">The pure, undiluted expression of Darjeeling. Light, floral, with the signature muscatel finish that has captivated connoisseurs for generations.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">₹1,200</span>
+                            <button class="product-cta" id="cta-classic">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card reveal reveal-delay-2">
+                    <div class="product-image">
+                        <span class="product-tag">New</span>
+                        <img src="images/rose-garden.png"
+                             alt="Rose Garden blend featuring dried rose petals, green tea leaves, and cardamom"
+                             loading="lazy" width="400" height="320">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Rose Garden Blend</h3>
+                        <p class="product-desc">Darjeeling first flush meets sun-dried Himalayan rose petals. A romantic, aromatic blend that blooms beautifully in the cup.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">₹1,500</span>
+                            <button class="product-cta" id="cta-rose">Explore</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card reveal reveal-delay-3">
+                    <div class="product-image">
+                        <span class="product-tag">Premium</span>
+                        <img src="images/ritual-set.png"
+                             alt="The Ritual Set featuring a glass brewing bowl with golden Darjeeling tea"
+                             loading="lazy" width="400" height="320">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">The Ritual Set</h3>
+                        <p class="product-desc">A complete brewing experience. Includes our signature first flush blend, handcrafted glass brewing bowl, and a guided tasting journal.</p>
+                        <div class="product-bottom">
+                            <span class="product-price">₹2,800</span>
+                            <button class="product-cta" id="cta-ritual">Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== TESTIMONIALS SECTION ======================== -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-divider reveal"></div>
+            <span class="section-label reveal">Voices</span>
+            <h2 class="reveal reveal-delay-1">From Our Tea Community</h2>
+            <div class="testimonials-wrapper reveal reveal-delay-2">
+                <!-- Top Row (Right to Left) -->
+                <div class="marquee-container">
+                    <div class="marquee-track top-track">
+                        <!-- Group 1 -->
+                        <div class="marquee-group">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"The most exquisite cup of tea I've ever had. The Rose Garden Blend transported me to the misty hills of Darjeeling with every sip."</p>
+                                <p class="testimonial-author">Priya Mukherjee</p>
+                                <p class="testimonial-location">Mumbai, India</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"I've tried teas from Darjeeling, Assam, Ceylon, and Japan — but nothing compares to the complexity and elegance of their First Flush Classic."</p>
+                                <p class="testimonial-author">James Whitfield</p>
+                                <p class="testimonial-location">London, UK</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"The Ritual Set makes every morning feel like a ceremony. The quality of the leaves and the attention to the brewing experience is extraordinary."</p>
+                                <p class="testimonial-author">Sarah Kim</p>
+                                <p class="testimonial-location">New York, USA</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"Absolutely brilliant. The packaging is a work of art and the tea itself is incredibly nuanced. A true premium experience."</p>
+                                <p class="testimonial-author">David Alaba</p>
+                                <p class="testimonial-location">Munich, Germany</p>
+                            </div>
+                        </div>
+                        <!-- Group 1 Duplicated for seamless loop -->
+                        <div class="marquee-group" aria-hidden="true">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"The most exquisite cup of tea I've ever had. The Rose Garden Blend transported me to the misty hills of Darjeeling with every sip."</p>
+                                <p class="testimonial-author">Priya Mukherjee</p>
+                                <p class="testimonial-location">Mumbai, India</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"I've tried teas from Darjeeling, Assam, Ceylon, and Japan — but nothing compares to the complexity and elegance of their First Flush Classic."</p>
+                                <p class="testimonial-author">James Whitfield</p>
+                                <p class="testimonial-location">London, UK</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"The Ritual Set makes every morning feel like a ceremony. The quality of the leaves and the attention to the brewing experience is extraordinary."</p>
+                                <p class="testimonial-author">Sarah Kim</p>
+                                <p class="testimonial-location">New York, USA</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"Absolutely brilliant. The packaging is a work of art and the tea itself is incredibly nuanced. A true premium experience."</p>
+                                <p class="testimonial-author">David Alaba</p>
+                                <p class="testimonial-location">Munich, Germany</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Row (Left to Right) -->
+                <div class="marquee-container">
+                    <div class="marquee-track bottom-track">
+                        <!-- Group 2 -->
+                        <div class="marquee-group">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"Finally, a tea brand that understands the importance of the entire experience — from the beautiful packaging to the very last golden sip."</p>
+                                <p class="testimonial-author">Arjun Sengupta</p>
+                                <p class="testimonial-location">Kolkata, India</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"Gifted the Rose Garden Blend to my mother and she called it 'the most thoughtful gift she's ever received.' The aroma alone is worth it."</p>
+                                <p class="testimonial-author">Anika Desai</p>
+                                <p class="testimonial-location">Bangalore, India</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"I'm a coffee person who got converted. The gentle warmth, the muscatel notes, the calming ritual — I look forward to my Darjeeling moment every day."</p>
+                                <p class="testimonial-author">Marcus Leclerc</p>
+                                <p class="testimonial-location">Paris, France</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"This isn't just tea; it's a testament to heritage. You can taste the mountain air and the artisanal care in every single drop."</p>
+                                <p class="testimonial-author">Eleanor Vance</p>
+                                <p class="testimonial-location">Boston, USA</p>
+                            </div>
+                        </div>
+                        <!-- Group 2 Duplicated for seamless loop -->
+                        <div class="marquee-group" aria-hidden="true">
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"Finally, a tea brand that understands the importance of the entire experience — from the beautiful packaging to the very last golden sip."</p>
+                                <p class="testimonial-author">Arjun Sengupta</p>
+                                <p class="testimonial-location">Kolkata, India</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"Gifted the Rose Garden Blend to my mother and she called it 'the most thoughtful gift she's ever received.' The aroma alone is worth it."</p>
+                                <p class="testimonial-author">Anika Desai</p>
+                                <p class="testimonial-location">Bangalore, India</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"I'm a coffee person who got converted. The gentle warmth, the muscatel notes, the calming ritual — I look forward to my Darjeeling moment every day."</p>
+                                <p class="testimonial-author">Marcus Leclerc</p>
+                                <p class="testimonial-location">Paris, France</p>
+                            </div>
+                            <div class="testimonial-card">
+                                <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                <p class="testimonial-text">"This isn't just tea; it's a testament to heritage. You can taste the mountain air and the artisanal care in every single drop."</p>
+                                <p class="testimonial-author">Eleanor Vance</p>
+                                <p class="testimonial-location">Boston, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer id="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <img src="images/logo.jpeg" alt="Royal Bengal Teas Logo" class="footer-logo-img">
+                    <p class="footer-tagline">Every leaf tells a story. Ours begins at 6,000 feet, where the Himalayas meet the sky and the world's finest tea is born.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Pinterest">PN</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#collection">First Flush Classic</a></li>
+                        <li><a href="#collection">Rose Garden Blend</a></li>
+                        <li><a href="#collection">The Ritual Set</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Join the Inner Circle</h4>
+                    <p class="footer-tagline" style="max-width: 280px; margin-bottom: 1rem;">Exclusive blends, early access, and the stories behind the tea — delivered to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="return false;">
+                        <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email" aria-label="Email for newsletter" required>
+                        <button type="submit" class="newsletter-btn">Join</button>
+                    </form>
+                    <div id="newsletter-message" class="newsletter-message">Joined, welcome to Royal Tea Palace-Inner Circle</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Royal Bengal Teas. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                </div>
+                
+                <div class="footer-designer">
+                    <p class="designer-text">Website gracefully designed by <strong>Sayantan Deb</strong></p>
+                    <a href="https://wa.me/918335850981?text=Hi! I am interested in creating a website like Royal Bengal Teas." target="_blank" rel="noopener noreferrer" class="designer-link" aria-label="Contact Resilient Phoenix Digital Solutions on WhatsApp">
+                        <img src="images/designer-logo.jpg" alt="Resilient Phoenix Digital Solutions" class="designer-logo">
+                        <div class="designer-link-text">
+                            <span class="designer-company">Resilient Phoenix Digital Solutions</span>
+                            <span class="designer-cta">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" style="margin-right: 4px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Let's build your website
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </footer>
+
+    <!-- ======================== CHECKOUT MODAL ======================== -->
+    <div class="modal-overlay" id="checkout-overlay" aria-hidden="true">
+        <div class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <img src="images/logo.jpeg" alt="Royal Bengal Teas Logo" class="modal-logo">
+                <h3 class="modal-title">Secure Checkout</h3>
+            </div>
+            
+            <div class="modal-body">
+                <!-- Step 1: Email -->
+                <div class="checkout-step active" id="step-1">
+                    <p class="step-desc">Where should we send your receipt?</p>
+                    <input type="email" class="checkout-input" id="checkout-email" placeholder="Enter your email address" required>
+                    <p class="error-msg" id="error-step-1">Please enter a valid email address.</p>
+                    <button class="checkout-btn" id="btn-next-1">Next</button>
+                </div>
+
+                <!-- Step 2: Address -->
+                <div class="checkout-step" id="step-2">
+                    <p class="step-desc">Where should we deliver your tea?</p>
+                    <textarea class="checkout-input" id="checkout-address" placeholder="Enter your full delivery address" rows="3" required></textarea>
+                    <p class="error-msg" id="error-step-2">Please enter your delivery address.</p>
+                    <button class="checkout-btn" id="btn-next-2">Next</button>
+                </div>
+
+                <!-- Step 3: UPI -->
+                <div class="checkout-step" id="step-3">
+                    <p class="step-desc">Complete your payment securely.</p>
+                    <input type="text" class="checkout-input" id="checkout-upi" placeholder="Enter your UPI ID (e.g. name@upi)" required>
+                    <p class="error-msg" id="error-step-3">Please enter a valid UPI ID.</p>
+                    <button class="checkout-btn" id="btn-pay">Pay Now</button>
+                </div>
+
+                <!-- Step 4: Success -->
+                <div class="checkout-step success-step" id="step-4">
+                    <div class="success-icon">✓</div>
+                    <h3 class="success-title">Order Placed</h3>
+                    <p class="success-desc">Your Peace is on its way, sit back and relax.</p>
+                    <button class="checkout-btn outline" id="btn-done">Return to Store</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================== FLOATING SOCIALS ======================== -->
+    <div class="floating-socials">
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Visit our Facebook page">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Visit our Instagram page">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
